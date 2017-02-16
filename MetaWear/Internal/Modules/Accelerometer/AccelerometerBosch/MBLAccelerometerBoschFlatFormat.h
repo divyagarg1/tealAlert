@@ -34,11 +34,14 @@
  */
 
 #import "MBLFormat.h"
+#import "MBLAccelerometerBosch+Private.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MBLAccelerometerBoschFlatFormat : MBLFormat
+@property (nonatomic, weak) MBLAccelerometerBosch *accelerometer;
 
+- (instancetype)initWithAccelerometer:(MBLAccelerometerBosch *)accelerometer;
 @end
 
 NS_ASSUME_NONNULL_END

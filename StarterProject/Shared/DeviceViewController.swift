@@ -17,16 +17,16 @@ class DeviceViewController: UIViewController {
     
     var device: MBLMetaWear!
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated);
-//        
-//        device.addObserver(self, forKeyPath: "state", options: NSKeyValueObservingOptions.new, context: nil)
-//        device.connectAsync().success { _ in
-//            self.device.led?.flashColorAsync(UIColor.green, withIntensity: 1.0, numberOfFlashes: 3)
-//            NSLog("We are connected")
-//        }
-//    }
-
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        super.viewWillAppear(animated);
+    //
+    //        device.addObserver(self, forKeyPath: "state", options: NSKeyValueObservingOptions.new, context: nil)
+    //        device.connectAsync().success { _ in
+    //            self.device.led?.flashColorAsync(UIColor.green, withIntensity: 1.0, numberOfFlashes: 3)
+    //            NSLog("We are connected")
+    //        }
+    //    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -68,6 +68,8 @@ class DeviceViewController: UIViewController {
         }
     }
     @IBAction func startPressed(_ sender: AnyObject) {
+        
+        
         device.accelerometer?.dataReadyEvent.startNotificationsAsync { (obj, error) in
             print(obj)
             self.accReaderLabel.text = "x: \(obj?.x),  y : \(obj?.y) , z : \(obj?.z)"
@@ -81,16 +83,20 @@ class DeviceViewController: UIViewController {
                 "Body": "Danger"
             ]
             
+//            device.accelerometer?.freeFallEvent.startNotificationsWithHandlerAsync(obj,  error) {
+//                NSLog("Dropped Me!");
+//            }
+            
             if let val = obj?.x {
                 if val < 0.026855 {
-                    Alamofire.request("http://192.168.1.105:5000/sms", method: .post, parameters: parameters, headers: headers).response {
+                    Alamofire.request("http://10.142.130.89:5000/sms", method: .post, parameters: parameters, headers: headers).response {
                         response in print(response)
                         
                     }
                 }
-
+                
             }
-                       //Send message
+            //Send message
             
             }.success { result in
                 print("Successfully subscribed")
@@ -98,6 +104,7 @@ class DeviceViewController: UIViewController {
                 print("Error on subscribe: \(error)")
         }
     }
+   
     @IBAction func stopPressed(_ sender: Any) {
         device.accelerometer?.dataReadyEvent.stopNotificationsAsync().success { result in
             print("Successfully unsubscribed")

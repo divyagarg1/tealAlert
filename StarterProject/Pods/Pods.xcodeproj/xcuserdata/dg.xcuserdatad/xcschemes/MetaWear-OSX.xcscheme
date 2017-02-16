@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0A2DABE544C0E990E94E59FF65010B9"
+               BlueprintIdentifier = "65970DA080D9D88197E469825D613DD1"
                BuildableName = "MetaWear.framework"
                BlueprintName = "MetaWear-OSX"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F0A2DABE544C0E990E94E59FF65010B9"
+            BlueprintIdentifier = "65970DA080D9D88197E469825D613DD1"
             BuildableName = "MetaWear.framework"
             BlueprintName = "MetaWear-OSX"
             ReferencedContainer = "container:Pods.xcodeproj">

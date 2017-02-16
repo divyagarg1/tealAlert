@@ -57,6 +57,7 @@
 
 - (void)testModuleVersions
 {
+    XCTAssertEqual(self.model, self.device.model);
     switch (self.model) {
         case MBLModelMetaWearR:
             AssertModule(self.device.mechanicalSwitch, 0, 0);
@@ -188,7 +189,7 @@
             AssertNilModule(self.device.photometer);
             AssertNilModule(self.device.proximity);
             break;
-        case MBLModelMetaWearCDet:
+        case MBLModelMetaDetector:
             AssertModule(self.device.mechanicalSwitch, 0, 0);
             AssertModule(self.device.led, 0, 1);
             AssertModule(self.device.accelerometer, 3, 1);
@@ -214,7 +215,7 @@
             AssertNilModule(self.device.photometer);
             AssertModule(self.device.proximity, 0, 0);
             break;
-        case MBLModelMetaWearCEnv:
+        case MBLModelMetaEnvironment:
             AssertModule(self.device.mechanicalSwitch, 0, 0);
             AssertModule(self.device.led, 0, 0);
             AssertModule(self.device.accelerometer, 3, 0);
@@ -269,13 +270,13 @@
         case MBLModelMetaMotionR:
             AssertModule(self.device.mechanicalSwitch, 0, 0);
             AssertModule(self.device.led, 0, 1);
-            AssertModule(self.device.accelerometer, 1, 1);
+            AssertModule(self.device.accelerometer, 1, 2);
             AssertModule(self.device.temperature, 1, 0);
             AssertModule(self.device.gpio, 0, 2);
             AssertModule(self.device.neopixel, 0, 0);
             AssertModule(self.device.iBeacon, 0, 0);
             AssertModule(self.device.hapticBuzzer, 0, 0);
-            AssertModule(self.device.dataProcessor, 0, 0);
+            AssertModule(self.device.dataProcessor, 0, 1);
             AssertModule(self.device.command, 0, 0);
             AssertModule(self.device.logging, 0, 2);
             AssertModule(self.device.timer, 0, 0);
@@ -283,7 +284,7 @@
             AssertNilModule(self.device.ancs);
             AssertModule(self.device.macro, 0, 1);
             AssertNilModule(self.device.conductance);
-            AssertModule(self.device.settings, 0, 4);
+            AssertModule(self.device.settings, 0, 5);
             AssertModule(self.device.barometer, 0, 0);
             AssertModule(self.device.gyro, 0, 1);
             AssertModule(self.device.ambientLight, 0, 0);
@@ -1707,6 +1708,48 @@
     
     [self waitForExpectationsWithTimeout:10 handler:nil];
 }
+
+- (void)testModifyEventUsingOperation
+{
+    XCTestExpectation *waitingExpectation = [self expectationWithDescription:@"testModifyEventUsingOperation"];
+    
+    MBLEvent<MBLNumericData *> *temp = [self.device.temperature.onDieThermistor periodicReadWithPeriod:500];
+    MBLFilter<MBLNumericData *> *doubleTemp = [temp modifyEventUsingOperation:MBLArithmeticOperationMultiply withData:2];
+    MBLFilter<MBLNumericData *> *halfTemp = [temp modifyEventUsingOperation:MBLArithmeticOperationDivide withData:2];
+    MBLFilter<MBLNumericData *> *fiftyLessTemp = [temp modifyEventUsingOperation:MBLArithmeticOperationSubtract withData:50.0];
+    MBLFilter<MBLNumericData *> *absTemp = [fiftyLessTemp modifyEventUsingOperation:MBLArithmeticOperationAbsoluteValue withData:0];
+    
+    double __block actualTemp = 0.0;
+    [temp startNotificationsWithHandlerAsync:^(MBLNumericData * _Nullable obj, NSError * _Nullable error) {
+        XCTAssertNil(error);
+        actualTemp = obj.value.doubleValue;
+        [temp stopNotificationsAsync];
+    }];
+    [doubleTemp startNotificationsWithHandlerAsync:^(MBLNumericData *  _Nullable obj, NSError * _Nullable error) {
+        XCTAssertNil(error);
+        XCTAssertEqualWithAccuracy(actualTemp * 2.0, obj.value.doubleValue, 0.1);
+        [doubleTemp stopNotificationsAsync];
+    }];
+    [halfTemp startNotificationsWithHandlerAsync:^(MBLNumericData *  _Nullable obj, NSError * _Nullable error) {
+        XCTAssertNil(error);
+        XCTAssertEqualWithAccuracy(actualTemp / 2.0, obj.value.doubleValue, 0.1);
+        [halfTemp stopNotificationsAsync];
+    }];
+    [fiftyLessTemp startNotificationsWithHandlerAsync:^(MBLNumericData *  _Nullable obj, NSError * _Nullable error) {
+        XCTAssertNil(error);
+        XCTAssertEqualWithAccuracy(actualTemp - 50.0, obj.value.doubleValue, 0.1);
+        [fiftyLessTemp stopNotificationsAsync];
+    }];
+    [absTemp startNotificationsWithHandlerAsync:^(MBLNumericData *  _Nullable obj, NSError * _Nullable error) {
+        XCTAssertNil(error);
+        XCTAssertEqualWithAccuracy(fabs(actualTemp - 50.0), obj.value.doubleValue, 0.1);
+        [absTemp stopNotificationsAsync];
+        [waitingExpectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10 handler:nil];
+}
+
 
 - (void)testProximity
 {

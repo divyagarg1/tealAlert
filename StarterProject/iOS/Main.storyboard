@@ -216,29 +216,29 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rC-4n-6ao">
-                                <rect key="frame" x="151" y="254" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0D-zZ-OHf">
+                                <rect key="frame" x="168" y="188" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="startPressed:" destination="XFA-76-WTO" eventType="touchUpInside" id="byj-wx-uVx"/>
+                                    <action selector="startPressed:" destination="XFA-76-WTO" eventType="touchUpInside" id="dPi-do-0no"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTZ-J3-AVp">
-                                <rect key="frame" x="152" y="345" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stopPressed:" destination="XFA-76-WTO" eventType="touchUpInside" id="SwM-wn-JYL"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Readings " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1N-zo-Cx5">
-                                <rect key="frame" x="50" y="422" width="285" height="113"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTm-f9-VER">
+                                <rect key="frame" x="68" y="371" width="272" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtZ-t4-xAM">
+                                <rect key="frame" x="176" y="266" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopPressed:" destination="XFA-76-WTO" eventType="touchUpInside" id="kkX-ys-dSR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -248,8 +248,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Device" id="zSU-Fp-fTT"/>
                     <connections>
-                        <outlet property="accReaderLabel" destination="t1N-zo-Cx5" id="Dos-tf-XhT"/>
-                        <outlet property="deviceStatus" destination="moM-jr-XgN" id="0mB-By-sMs"/>
+                        <outlet property="accReaderLabel" destination="NTm-f9-VER" id="c6u-Xm-HpG"/>
+                        <outlet property="deviceStatus" destination="moM-jr-XgN" id="pJ8-Nu-7d1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozi-iQ-HNv" userLabel="First Responder" sceneMemberID="firstResponder"/>

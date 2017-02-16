@@ -72,7 +72,7 @@
     [((MBLBarometerBMP280 *)self.device.barometer).periodicPressure startNotificationsWithHandlerAsync:^(MBLNumericData * _Nullable obj, NSError * _Nullable error) {
         NSLog(@"%@", obj);
     }];
-
+    
     
     XCTestExpectation *waitingExpectation = [self expectationWithDescription:@"pause for manual verification"];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2000 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -115,7 +115,7 @@
 
 - (void)testSingleTapUpdates
 {
-    self.accelerometer.tapType = MBLAccelerometerTapTypeSingle;
+    self.accelerometer.tapEvent.type = MBLAccelerometerTapTypeSingle;
     self.accelerometer.fullScaleRange = MBLAccelerometerBoschRange16G;
     self.accelerometer.sampleFrequency = 100;
     [self eventUpdateTest:self.accelerometer.tapEvent time:20];
@@ -123,7 +123,7 @@
 
 - (void)testDoubleTapUpdates
 {
-    self.accelerometer.tapType = MBLAccelerometerTapTypeDouble;
+    self.accelerometer.tapEvent.type = MBLAccelerometerTapTypeDouble;
     self.accelerometer.fullScaleRange = MBLAccelerometerBoschRange16G;
     self.accelerometer.sampleFrequency = 100;
     [self eventUpdateTest:self.accelerometer.tapEvent time:20];
@@ -131,7 +131,7 @@
 
 - (void)testSingleAndDoubleTap
 {
-    self.accelerometer.tapType = MBLAccelerometerTapTypeBoth;
+    self.accelerometer.tapEvent.type = MBLAccelerometerTapTypeBoth;
     self.accelerometer.fullScaleRange = MBLAccelerometerBoschRange8G;
     self.accelerometer.sampleFrequency = 100;
     [self eventUpdateTest:self.accelerometer.tapEvent time:20];
@@ -147,7 +147,7 @@
 - (void)testStepDetectorUpdates
 {
     [self.accelerometer resetStepCount];
-
+    
     self.accelerometer.fullScaleRange = MBLAccelerometerBoschRange8G;
     self.accelerometer.sampleFrequency = 100;
     [self eventUpdateTest:self.accelerometer.stepEvent time:20];
@@ -271,6 +271,29 @@
         [waitingExpectation fulfill];
     });
     
+    [self waitForExpectationsWithTimeout:200000 handler:nil];
+}
+
+- (void)testFlatAndStream
+{
+    XCTestExpectation *waitingExpectation = [self expectationWithDescription:@"wait for reads"];
+    
+    self.accelerometer.sampleFrequency = 10.0;
+    [self.accelerometer.flatEvent startNotificationsWithHandlerAsync:^(MBLNumericData * _Nullable obj, NSError * _Nullable error) {
+        NSLog(@"%@", obj);
+    }];
+    [BFTask taskFromMetaWearWithBlock:^id _Nonnull{
+        [self.accelerometer.orientationEvent addNotificationWithExecutor:[BFExecutor dispatchExecutor] handler:^(id  _Nullable obj, NSError * _Nullable error) {
+            NSLog(@"%@", obj);
+        }];
+        [self.accelerometer.orientationEvent performAsyncStartNotifications];
+        return nil;
+    }];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20000 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [waitingExpectation fulfill];
+    });
     [self waitForExpectationsWithTimeout:200000 handler:nil];
 }
 

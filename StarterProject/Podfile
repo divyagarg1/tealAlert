@@ -8,6 +8,7 @@ abstract_target 'Starter' do
 
     # Pods for iOS
     pod 'MBProgressHUD'
+    
     #Pod for Twilio SMS
     pod 'Alamofire', '~> 4.0.1'
   end
@@ -24,6 +25,5 @@ abstract_target 'Starter' do
     # Pods for tvOS
     pod 'MBProgressHUD'
   end
-  
 end
 
