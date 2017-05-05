@@ -13,7 +13,10 @@ protocol ScanTableViewControllerDelegate {
     func scanTableViewController(_ controller: ScanTableViewController, didSelectDevice device: MBLMetaWear)
 }
 
-class ScanTableViewController: UITableViewController {
+class ScanTableViewController: UITableViewController, UIViewControllerTransitioningDelegate {
+    
+    
+    
     var delegate: ScanTableViewControllerDelegate?
     var devices: [MBLMetaWear]?
     var selected: MBLMetaWear?
@@ -26,6 +29,16 @@ class ScanTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+//        // Status bar white font
+//        self.navigationBar.barStyle = UIBarStyle.Black
+//        self.navigationBar.tintColor = UIColor.whiteColor()
+//        
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

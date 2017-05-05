@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DeviceViewController.saveConfig(UIButton) -&gt; ():DeviceViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "config.id">
+            </PersistentString>
+            <PersistentString
+               value = "config.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DeviceViewController.initConfig() -&gt; ():DeviceViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "nameLabel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DeviceViewController.fetchConfigFromCoreData() -&gt; ():DeviceViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "savedConfig">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DeviceViewController.editConfig(Any) -&gt; ():DeviceViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "textField.isHidden">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

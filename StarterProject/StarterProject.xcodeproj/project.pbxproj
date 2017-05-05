@@ -10,9 +10,6 @@
 		402973391DB81F5B00EC8C32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402973371DB81F5B00EC8C32 /* LaunchScreen.storyboard */; };
 		402973471DB81F5B00EC8C32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402973451DB81F5B00EC8C32 /* Main.storyboard */; };
 		402973501DB81F5B00EC8C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4029734F1DB81F5B00EC8C32 /* AppDelegate.swift */; };
-		402973601DB81F5B00EC8C32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 402973281DB81F5A00EC8C32 /* Assets.xcassets */; };
-		402973611DB81F5B00EC8C32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 402973281DB81F5A00EC8C32 /* Assets.xcassets */; };
-		402973621DB81F5B00EC8C32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 402973281DB81F5A00EC8C32 /* Assets.xcassets */; };
 		4029736F1DB8244D00EC8C32 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4029736E1DB8244D00EC8C32 /* ScanViewController.swift */; };
 		402973711DB8246200EC8C32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402973701DB8246200EC8C32 /* Main.storyboard */; };
 		402973791DB8260000EC8C32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402973751DB8260000EC8C32 /* Main.storyboard */; };
@@ -26,6 +23,17 @@
 		402973881DB839ED00EC8C32 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402973821DB839EA00EC8C32 /* MainTableViewController.swift */; };
 		A74CC4E904D4261827DB3639 /* Pods_Starter_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */; };
 		BC31A9FBED54BD932058B42E /* Pods_Starter_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B810285FECA2430C1FAEF3F /* Pods_Starter_tvOS.framework */; };
+		C361FBD01E7749FF00119175 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C361FBCF1E7749FF00119175 /* CoreLocation.framework */; };
+		C361FBD21E774A0600119175 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C361FBD11E774A0600119175 /* MapKit.framework */; };
+		C3C64F041E88A52F0048D6B5 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C3C64F031E88A52F0048D6B5 /* bell.mp3 */; };
+		C3C64F061E8AF02A0048D6B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3C64F051E8AF02A0048D6B5 /* LaunchScreen.storyboard */; };
+		C3D07A031E95F10300A04563 /* CofigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D07A021E95F10300A04563 /* CofigViewController.swift */; };
+		C3D07A071E96120F00A04563 /* Assets1.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3D07A061E96120F00A04563 /* Assets1.xcassets */; };
+		C3D07A091E96B83100A04563 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C3D07A081E96B83100A04563 /* alarm.mp3 */; };
+		C3D07A0B1E96B83A00A04563 /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C3D07A0A1E96B83A00A04563 /* alarm1.mp3 */; };
+		C3D07A0D1E96B84100A04563 /* alarm2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C3D07A0C1E96B84100A04563 /* alarm2.mp3 */; };
+		C3E9935D1E8829A800007E63 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E9935C1E8829A800007E63 /* CoreData.framework */; };
+		C3E993601E882C1300007E63 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3E9935E1E882C1300007E63 /* Model.xcdatamodeld */; };
 		E829A8A800A7AFC5A4C5DA7A /* Pods_Starter_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3D37560DD979815A53DF1B /* Pods_Starter_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,8 +44,7 @@
 		263A788447671602C2AE4FFF /* Pods-Starter-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-tvOS/Pods-Starter-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2C1A4E13D173813A39F97132 /* Pods-Starter-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-iOS/Pods-Starter-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		402973271DB81F5A00EC8C32 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		402973281DB81F5A00EC8C32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4029732D1DB81F5B00EC8C32 /* StarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4029732D1DB81F5B00EC8C32 /* Teal Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teal Alert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		402973381DB81F5B00EC8C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4029733A1DB81F5B00EC8C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4029733F1DB81F5B00EC8C32 /* StarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +63,17 @@
 		4B810285FECA2430C1FAEF3F /* Pods_Starter_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Starter_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5831B849867AF94CA117AB75 /* Pods-Starter-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-macOS/Pods-Starter-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		BC9E019C266AD9823B5E877D /* Pods-Starter-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Starter-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Starter-tvOS/Pods-Starter-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		C361FBCF1E7749FF00119175 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		C361FBD11E774A0600119175 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		C3C64F031E88A52F0048D6B5 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = "Shared/Supported Files/bell.mp3"; sourceTree = "<group>"; };
+		C3C64F051E8AF02A0048D6B5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3D07A021E95F10300A04563 /* CofigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CofigViewController.swift; sourceTree = "<group>"; };
+		C3D07A061E96120F00A04563 /* Assets1.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets1.xcassets; sourceTree = "<group>"; };
+		C3D07A081E96B83100A04563 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm.mp3; path = Shared/alarm.mp3; sourceTree = "<group>"; };
+		C3D07A0A1E96B83A00A04563 /* alarm1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm1.mp3; path = Shared/alarm1.mp3; sourceTree = "<group>"; };
+		C3D07A0C1E96B84100A04563 /* alarm2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm2.mp3; path = Shared/alarm2.mp3; sourceTree = "<group>"; };
+		C3E9935C1E8829A800007E63 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		C3E9935F1E882C1300007E63 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Starter_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E9935D1E8829A800007E63 /* CoreData.framework in Frameworks */,
+				C361FBD21E774A0600119175 /* MapKit.framework in Frameworks */,
+				C361FBD01E7749FF00119175 /* CoreLocation.framework in Frameworks */,
 				E829A8A800A7AFC5A4C5DA7A /* Pods_Starter_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +111,9 @@
 		1A2EFF41F64FC47F9E047F00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3E9935C1E8829A800007E63 /* CoreData.framework */,
+				C361FBD11E774A0600119175 /* MapKit.framework */,
+				C361FBCF1E7749FF00119175 /* CoreLocation.framework */,
 				0C3D37560DD979815A53DF1B /* Pods_Starter_iOS.framework */,
 				F3CC4717E50B1C51696459B4 /* Pods_Starter_macOS.framework */,
 				4B810285FECA2430C1FAEF3F /* Pods_Starter_tvOS.framework */,
@@ -100,6 +124,10 @@
 		4029731F1DB81F5A00EC8C32 = {
 			isa = PBXGroup;
 			children = (
+				C3D07A081E96B83100A04563 /* alarm.mp3 */,
+				C3D07A0A1E96B83A00A04563 /* alarm1.mp3 */,
+				C3D07A0C1E96B84100A04563 /* alarm2.mp3 */,
+				C3C64F031E88A52F0048D6B5 /* bell.mp3 */,
 				402973241DB81F5A00EC8C32 /* Shared */,
 				4029732F1DB81F5B00EC8C32 /* iOS */,
 				402973401DB81F5B00EC8C32 /* tvOS */,
@@ -113,12 +141,15 @@
 		402973241DB81F5A00EC8C32 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C3D07A061E96120F00A04563 /* Assets1.xcassets */,
+				C3E9935E1E882C1300007E63 /* Model.xcdatamodeld */,
+				C3C64F051E8AF02A0048D6B5 /* LaunchScreen.storyboard */,
 				402973801DB839EA00EC8C32 /* AppDelegate.swift */,
 				402973811DB839EA00EC8C32 /* DeviceViewController.swift */,
 				402973821DB839EA00EC8C32 /* MainTableViewController.swift */,
 				402973271DB81F5A00EC8C32 /* GameScene.swift */,
 				4029737D1DB839AF00EC8C32 /* ScanTableViewController.swift */,
-				402973281DB81F5A00EC8C32 /* Assets.xcassets */,
+				C3D07A021E95F10300A04563 /* CofigViewController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -126,7 +157,7 @@
 		4029732E1DB81F5B00EC8C32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4029732D1DB81F5B00EC8C32 /* StarterProject.app */,
+				4029732D1DB81F5B00EC8C32 /* Teal Alert.app */,
 				4029733F1DB81F5B00EC8C32 /* StarterProject.app */,
 				4029734D1DB81F5B00EC8C32 /* StarterProject.app */,
 			);
@@ -196,7 +227,7 @@
 			);
 			name = iOS;
 			productName = iOS;
-			productReference = 4029732D1DB81F5B00EC8C32 /* StarterProject.app */;
+			productReference = 4029732D1DB81F5B00EC8C32 /* Teal Alert.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4029733E1DB81F5B00EC8C32 /* tvOS */ = {
@@ -253,6 +284,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 7P3XU948F5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					4029733E1DB81F5B00EC8C32 = {
 						CreatedOnToolsVersion = 8.0;
@@ -291,9 +327,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C64F041E88A52F0048D6B5 /* bell.mp3 in Resources */,
 				402973791DB8260000EC8C32 /* Main.storyboard in Resources */,
+				C3D07A091E96B83100A04563 /* alarm.mp3 in Resources */,
 				402973391DB81F5B00EC8C32 /* LaunchScreen.storyboard in Resources */,
-				402973601DB81F5B00EC8C32 /* Assets.xcassets in Resources */,
+				C3D07A0B1E96B83A00A04563 /* alarm1.mp3 in Resources */,
+				C3D07A071E96120F00A04563 /* Assets1.xcassets in Resources */,
+				C3C64F061E8AF02A0048D6B5 /* LaunchScreen.storyboard in Resources */,
+				C3D07A0D1E96B84100A04563 /* alarm2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +343,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				402973471DB81F5B00EC8C32 /* Main.storyboard in Resources */,
-				402973611DB81F5B00EC8C32 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +350,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				402973621DB81F5B00EC8C32 /* Assets.xcassets in Resources */,
 				402973711DB8246200EC8C32 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,8 +501,10 @@
 			files = (
 				402973851DB839EA00EC8C32 /* MainTableViewController.swift in Sources */,
 				402973831DB839EA00EC8C32 /* AppDelegate.swift in Sources */,
+				C3E993601E882C1300007E63 /* Model.xcdatamodeld in Sources */,
 				4029737E1DB839AF00EC8C32 /* ScanTableViewController.swift in Sources */,
 				402973841DB839EA00EC8C32 /* DeviceViewController.swift in Sources */,
+				C3D07A031E95F10300A04563 /* CofigViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,10 +646,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7P3XU948F5;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mbientlab.tealAlert;
-				PRODUCT_NAME = StarterProject;
+				PRODUCT_NAME = "Teal Alert";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -622,10 +663,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7P3XU948F5;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mbientlab.tealAlert;
-				PRODUCT_NAME = StarterProject;
+				PRODUCT_NAME = "Teal Alert";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -739,6 +780,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3E9935E1E882C1300007E63 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3E9935F1E882C1300007E63 /* Model.xcdatamodel */,
+			);
+			currentVersion = C3E9935F1E882C1300007E63 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 402973201DB81F5A00EC8C32 /* Project object */;
 }
